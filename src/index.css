@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-gold: #d4af37;
+  --color-gold-light: #f9e29c;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0a0a0a] text-slate-100;
+  }
+}
+
+.app-background {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), 
+              url('https://images.unsplash.com/photo-1611974717483-9b910c0c7056?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+@utility glass-card {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl;
+}
+
+@utility gold-gradient {
+  background: linear-gradient(135deg, #d4af37 0%, #f9e29c 100%);
+}
+
+@utility gold-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#d4af37] to-[#f9e29c];
+}
+
+@utility message-ai {
+  @apply bg-white/10 rounded-2xl rounded-tl-none p-4 max-w-[90%] self-start border border-white/5;
+}
+
+@utility message-user {
+  @apply gold-gradient text-black font-medium rounded-2xl rounded-tr-none p-4 max-w-[90%] self-end shadow-lg shadow-gold/20;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

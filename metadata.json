@@ -1,0 +1,7 @@
+{
+  "name": "Finance X",
+  "description": "Seu assistente financeiro pessoal estilo WhatsApp. Organize suas finanças por voz, texto ou foto.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
